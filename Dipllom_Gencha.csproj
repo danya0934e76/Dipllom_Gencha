@@ -64,6 +64,7 @@
     <Compile Include="coach.Designer.cs">
       <DependentUpon>coach.cs</DependentUpon>
     </Compile>
+    <Compile Include="comman\UserRoles.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="footb.cs">
       <SubType>Form</SubType>
