@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dipllom_Gencha
 {
-    public partial class vxod : Form
+    public partial class personal : Form
     {
-        public vxod()
+        public personal()
         {
             InitializeComponent();
         }
@@ -22,6 +22,7 @@ namespace Dipllom_Gencha
             avtoriz avtoriz = new avtoriz();
             avtoriz.Show();
             this.Hide();
+
         }
     }
 }

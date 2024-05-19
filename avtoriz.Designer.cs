@@ -63,6 +63,7 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(263, 20);
             this.login.TabIndex = 2;
+            this.login.TextChanged += new System.EventHandler(this.login_TextChanged);
             // 
             // pass
             // 

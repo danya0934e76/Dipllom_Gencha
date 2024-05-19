@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dipllom_Gencha
 {
-    public partial class vxod : Form
+    public partial class footb : Form
     {
-        public vxod()
+        public footb()
         {
             InitializeComponent();
         }

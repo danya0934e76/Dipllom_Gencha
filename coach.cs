@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Dipllom_Gencha
 {
-    public partial class vxod : Form
+    public partial class coach : Form
     {
-        public vxod()
+        public coach()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             avtoriz avtoriz = new avtoriz();
             avtoriz.Show();
