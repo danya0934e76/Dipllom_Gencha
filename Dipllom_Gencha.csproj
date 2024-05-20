@@ -66,6 +66,16 @@
     </Compile>
     <Compile Include="comman\UserRoles.cs" />
     <Compile Include="DataBase.cs" />
+    <Compile Include="DiplomBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiplomBaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DiplomBaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiplomBaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="footb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +90,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="vxod.cs">
+    <Compile Include="traininga.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vxod.Designer.cs">
-      <DependentUpon>vxod.cs</DependentUpon>
+    <Compile Include="traininga.Designer.cs">
+      <DependentUpon>traininga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainingf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainingf.Designer.cs">
+      <DependentUpon>trainingf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainingc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainingc.Designer.cs">
+      <DependentUpon>trainingc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainingp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainingp.Designer.cs">
+      <DependentUpon>trainingp.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
@@ -110,9 +138,40 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vxod.resx">
-      <DependentUpon>vxod.cs</DependentUpon>
+    <EmbeddedResource Include="traininga.resx">
+      <DependentUpon>traininga.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="trainingf.resx">
+      <DependentUpon>trainingf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainingc.resx">
+      <DependentUpon>trainingc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainingp.resx">
+      <DependentUpon>trainingp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DiplomBaseDataSet.xsc">
+      <DependentUpon>DiplomBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiplomBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiplomBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiplomBaseDataSet.xss">
+      <DependentUpon>DiplomBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiplomBaseDataSet1.xsc">
+      <DependentUpon>DiplomBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DiplomBaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiplomBaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiplomBaseDataSet1.xss">
+      <DependentUpon>DiplomBaseDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

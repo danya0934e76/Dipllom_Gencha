@@ -84,29 +84,49 @@ namespace Dipllom_Gencha
             {
                 MessageBox.Show("Ошибка");
             }
-
-            //SqlDataAdapter adapter = new SqlDataAdapter();
-            //DataTable dt = new DataTable();
-            //string sql = $"select login, password from polzovatel where login ='{log}' and password ='{password}'";
-
-            //SqlCommand command = new SqlCommand(sql, connection: DataBase.GetConnection());
-
-            //adapter.SelectCommand = command ;
-            //adapter.Fill(dt);
-            //if (dt.Rows.Count == 1) 
-            //{
-            //    MessageBox.Show("вход выполнен");
-            //    vxod vxod = new vxod();
-            //    vxod.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Вход не выполнен, попробуйте еще");
-            //}
         }
 
         private void login_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registr_Click(object sender, EventArgs e)
+        {
+            DataBase DataBase = new DataBase();
+            var namer = name.Text;
+            var secr = second.Text;
+            var loginr = logr.Text;
+            var passwordr  = passr.Text;
+            var roler = roles.Text;
+
+            if (string.IsNullOrWhiteSpace(loginr) || string.IsNullOrWhiteSpace(passwordr) || string.IsNullOrWhiteSpace(namer) || string.IsNullOrWhiteSpace(passwordr)) 
+            {
+                MessageBox.Show("Заполните все данные");
+                return;
+            }
+            string registr = $"insert into polzov (name,secname,login,password,role) values ('{namer}','{secr}' ,'{loginr}','{passwordr}','{roler}'";
+           // string registr = $"insert into polzov (name,secname,login,password,role) values @name and @secname and @login and @password and @role ";
+            SqlCommand commandr = new SqlCommand(registr, DataBase.GetConnection());
+            commandr.Parameters.AddWithValue("name", namer);
+            commandr.Parameters.AddWithValue("secname", secr);
+            commandr.Parameters.AddWithValue("login",loginr);
+            commandr.Parameters.AddWithValue ("password", passwordr);
+            commandr.Parameters.AddWithValue("role", roler);
+            DataBase.OpenConnection();
+            if (commandr.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Аккаунт создан успешно");
+
+            }
+            else
+            {
+                MessageBox.Show("ошибка, попробуйте еще раз") ;
+            }
+           DataBase.CloseConnection();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -10,18 +10,28 @@ using System.Windows.Forms;
 
 namespace Dipllom_Gencha
 {
-    public partial class vxod : Form
+    public partial class trainingp : Form
     {
-        public vxod()
+        public trainingp()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            avtoriz avtoriz = new avtoriz();
-            avtoriz.Show();
+            personal personal = new personal();
+            personal.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
