@@ -105,13 +105,13 @@ namespace Dipllom_Gencha
                 MessageBox.Show("Заполните все данные");
                 return;
             }
-            string registr = $"insert into polzov (name,secname,login,password,role) values ('{namer}','{secr}' ,'{loginr}','{passwordr}','{roler}'";
-           // string registr = $"insert into polzov (name,secname,login,password,role) values @name and @secname and @login and @password and @role ";
+            //string registr = $"insert into polzov (name,secname,login,password,role) values ('{namer}','{secr}' ,'{loginr}','{passwordr}','{roler}'";
+           string registr = $"insert into polzov (name,secname,login,password,role) values (@name , @secname, @login, @password , @role) ";
             SqlCommand commandr = new SqlCommand(registr, DataBase.GetConnection());
             commandr.Parameters.AddWithValue("name", namer);
             commandr.Parameters.AddWithValue("secname", secr);
-            commandr.Parameters.AddWithValue("login",loginr);
-            commandr.Parameters.AddWithValue ("password", passwordr);
+            commandr.Parameters.AddWithValue("login", loginr);
+            commandr.Parameters.AddWithValue("password", passwordr);
             commandr.Parameters.AddWithValue("role", roler);
             DataBase.OpenConnection();
             if (commandr.ExecuteNonQuery() == 1)

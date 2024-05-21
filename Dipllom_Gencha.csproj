@@ -76,11 +76,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DiplomBaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DiplomBaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiplomBaseDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="footb.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="footb.Designer.cs">
       <DependentUpon>footb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gamesc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gamesc.Designer.cs">
+      <DependentUpon>gamesc.cs</DependentUpon>
     </Compile>
     <Compile Include="personal.cs">
       <SubType>Form</SubType>
@@ -125,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="footb.resx">
       <DependentUpon>footb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gamesc.resx">
+      <DependentUpon>gamesc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="personal.resx">
       <DependentUpon>personal.cs</DependentUpon>
@@ -171,6 +185,17 @@
     </None>
     <None Include="DiplomBaseDataSet1.xss">
       <DependentUpon>DiplomBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DiplomBaseDataSet2.xsc">
+      <DependentUpon>DiplomBaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DiplomBaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiplomBaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiplomBaseDataSet2.xss">
+      <DependentUpon>DiplomBaseDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
