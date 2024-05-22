@@ -177,6 +177,7 @@
             this.button2.TabIndex = 34;
             this.button2.Text = "Список игр";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label2
             // 
@@ -213,9 +214,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(200, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(505, 42);
+            this.label1.Size = new System.Drawing.Size(526, 42);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Футбльный клуб Барселона";
+            this.label1.Text = "Футбольный клуб Барселона";
             // 
             // training
             // 

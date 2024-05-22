@@ -123,5 +123,12 @@ namespace Dipllom_Gencha
             avtoriz.Show();
             this.Hide();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            gamesc gamesc = new gamesc();
+            gamesc.Show();
+            this.Hide();
+        }
     }
 }

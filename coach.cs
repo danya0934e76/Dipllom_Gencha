@@ -41,7 +41,9 @@ namespace Dipllom_Gencha
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            gamesc gamesc = new gamesc();
+            gamesc.Show();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
