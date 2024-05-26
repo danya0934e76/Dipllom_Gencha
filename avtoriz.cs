@@ -27,6 +27,7 @@ namespace Dipllom_Gencha
         {
             InitializeComponent();
            pass.UseSystemPasswordChar = true;
+           passr.UseSystemPasswordChar = true;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -128,6 +129,19 @@ namespace Dipllom_Gencha
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (passrch.Checked)
+            {
+                passr.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passr.UseSystemPasswordChar = true;
+            }
 
         }
     }

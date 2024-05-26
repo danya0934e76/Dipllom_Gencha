@@ -92,6 +92,12 @@
     <Compile Include="footb.Designer.cs">
       <DependentUpon>footb.cs</DependentUpon>
     </Compile>
+    <Compile Include="gamesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gamesa.Designer.cs">
+      <DependentUpon>gamesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="gamesc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="footb.resx">
       <DependentUpon>footb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gamesa.resx">
+      <DependentUpon>gamesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gamesc.resx">
       <DependentUpon>gamesc.cs</DependentUpon>
