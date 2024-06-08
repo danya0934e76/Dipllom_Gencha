@@ -13,6 +13,7 @@ namespace Dipllom_Gencha
     public partial class gamesa : Form
     {
         public gamesa()
+
         {
             InitializeComponent();
         }
