@@ -33,11 +33,6 @@
             this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gamesTableAdapter = new Dipllom_Gencha.DiplomBaseDataSet3TableAdapters.gamesTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            this.dategameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tournamentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stadiumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oponentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idgameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gamesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.diplomBaseDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diplomBaseDataSet4 = new Dipllom_Gencha.DiplomBaseDataSet4();
@@ -48,8 +43,13 @@
             this.gamesTableAdapter2 = new Dipllom_Gencha.DiplomBaseDataSet3TableAdapters.gamesTableAdapter();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.game = new System.Windows.Forms.Label();
-            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idgameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oponentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stadiumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tournamentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dategameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource3)).BeginInit();
@@ -86,37 +86,6 @@
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dategameDataGridViewTextBoxColumn
-            // 
-            this.dategameDataGridViewTextBoxColumn.DataPropertyName = "date_game";
-            this.dategameDataGridViewTextBoxColumn.HeaderText = "date_game";
-            this.dategameDataGridViewTextBoxColumn.Name = "dategameDataGridViewTextBoxColumn";
-            // 
-            // tournamentDataGridViewTextBoxColumn
-            // 
-            this.tournamentDataGridViewTextBoxColumn.DataPropertyName = "tournament";
-            this.tournamentDataGridViewTextBoxColumn.HeaderText = "tournament";
-            this.tournamentDataGridViewTextBoxColumn.Name = "tournamentDataGridViewTextBoxColumn";
-            // 
-            // stadiumDataGridViewTextBoxColumn
-            // 
-            this.stadiumDataGridViewTextBoxColumn.DataPropertyName = "stadium";
-            this.stadiumDataGridViewTextBoxColumn.HeaderText = "stadium";
-            this.stadiumDataGridViewTextBoxColumn.Name = "stadiumDataGridViewTextBoxColumn";
-            // 
-            // oponentDataGridViewTextBoxColumn
-            // 
-            this.oponentDataGridViewTextBoxColumn.DataPropertyName = "oponent";
-            this.oponentDataGridViewTextBoxColumn.HeaderText = "oponent";
-            this.oponentDataGridViewTextBoxColumn.Name = "oponentDataGridViewTextBoxColumn";
-            // 
-            // idgameDataGridViewTextBoxColumn
-            // 
-            this.idgameDataGridViewTextBoxColumn.DataPropertyName = "id_game";
-            this.idgameDataGridViewTextBoxColumn.HeaderText = "id_game";
-            this.idgameDataGridViewTextBoxColumn.Name = "idgameDataGridViewTextBoxColumn";
-            this.idgameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gamesBindingSource3
             // 
@@ -171,12 +140,6 @@
             this.game.TabIndex = 7;
             this.game.Text = "Игры команды";
             // 
-            // scoreDataGridViewTextBoxColumn
-            // 
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "score";
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "score";
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -191,8 +154,45 @@
             this.dataGridView1.DataSource = this.gamesBindingSource3;
             this.dataGridView1.Location = new System.Drawing.Point(12, 78);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(910, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(910, 406);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // idgameDataGridViewTextBoxColumn
+            // 
+            this.idgameDataGridViewTextBoxColumn.DataPropertyName = "id_game";
+            this.idgameDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idgameDataGridViewTextBoxColumn.Name = "idgameDataGridViewTextBoxColumn";
+            this.idgameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // oponentDataGridViewTextBoxColumn
+            // 
+            this.oponentDataGridViewTextBoxColumn.DataPropertyName = "oponent";
+            this.oponentDataGridViewTextBoxColumn.HeaderText = "Оппонент";
+            this.oponentDataGridViewTextBoxColumn.Name = "oponentDataGridViewTextBoxColumn";
+            // 
+            // stadiumDataGridViewTextBoxColumn
+            // 
+            this.stadiumDataGridViewTextBoxColumn.DataPropertyName = "stadium";
+            this.stadiumDataGridViewTextBoxColumn.HeaderText = "Стадион";
+            this.stadiumDataGridViewTextBoxColumn.Name = "stadiumDataGridViewTextBoxColumn";
+            // 
+            // tournamentDataGridViewTextBoxColumn
+            // 
+            this.tournamentDataGridViewTextBoxColumn.DataPropertyName = "tournament";
+            this.tournamentDataGridViewTextBoxColumn.HeaderText = "Турнир";
+            this.tournamentDataGridViewTextBoxColumn.Name = "tournamentDataGridViewTextBoxColumn";
+            // 
+            // scoreDataGridViewTextBoxColumn
+            // 
+            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "score";
+            this.scoreDataGridViewTextBoxColumn.HeaderText = "Счет";
+            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
+            // 
+            // dategameDataGridViewTextBoxColumn
+            // 
+            this.dategameDataGridViewTextBoxColumn.DataPropertyName = "date_game";
+            this.dategameDataGridViewTextBoxColumn.HeaderText = "Дата игры";
+            this.dategameDataGridViewTextBoxColumn.Name = "dategameDataGridViewTextBoxColumn";
             // 
             // gamesc
             // 
@@ -226,11 +226,6 @@
         private System.Windows.Forms.BindingSource gamesBindingSource;
         private DiplomBaseDataSet3TableAdapters.gamesTableAdapter gamesTableAdapter;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dategameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tournamentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stadiumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oponentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idgameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource gamesBindingSource3;
         private System.Windows.Forms.BindingSource diplomBaseDataSet4BindingSource;
         private DiplomBaseDataSet4 diplomBaseDataSet4;
@@ -241,7 +236,12 @@
         private DiplomBaseDataSet3TableAdapters.gamesTableAdapter gamesTableAdapter2;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label game;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idgameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oponentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stadiumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tournamentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dategameDataGridViewTextBoxColumn;
     }
 }

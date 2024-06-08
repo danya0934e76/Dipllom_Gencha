@@ -35,14 +35,15 @@
             this.traning1TableAdapter = new Dipllom_Gencha.DiplomBaseDataSet1TableAdapters.traning1TableAdapter();
             this.deleteB = new System.Windows.Forms.TextBox();
             this.delete = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.change = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.traning1BindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.diplomBaseDataSet2 = new Dipllom_Gencha.DiplomBaseDataSet2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timeTrain = new System.Windows.Forms.MaskedTextBox();
             this.secondCoach = new System.Windows.Forms.ComboBox();
+            this.coachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainCoach = new System.Windows.Forms.ComboBox();
             this.placeTrain = new System.Windows.Forms.ComboBox();
             this.typeTrain = new System.Windows.Forms.ComboBox();
@@ -54,12 +55,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.traning1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.coachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coachTableAdapter = new Dipllom_Gencha.DiplomBaseDataSet1TableAdapters.coachTableAdapter();
             this.traning1BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.traning1BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.diplomBaseDataSet2 = new Dipllom_Gencha.DiplomBaseDataSet2();
-            this.traning1BindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.traning1TableAdapter1 = new Dipllom_Gencha.DiplomBaseDataSet2TableAdapters.traning1TableAdapter();
             this.idtrainingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayofweekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,16 +66,17 @@
             this.mestotrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maincoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.secondcoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -106,48 +105,32 @@
             // 
             // deleteB
             // 
-            this.deleteB.Location = new System.Drawing.Point(804, 372);
+            this.deleteB.Location = new System.Drawing.Point(616, 359);
             this.deleteB.Name = "deleteB";
-            this.deleteB.Size = new System.Drawing.Size(111, 20);
+            this.deleteB.Size = new System.Drawing.Size(215, 20);
             this.deleteB.TabIndex = 30;
             // 
             // delete
             // 
+            this.delete.BackColor = System.Drawing.Color.IndianRed;
             this.delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete.Location = new System.Drawing.Point(583, 365);
+            this.delete.Location = new System.Drawing.Point(616, 385);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(215, 33);
             this.delete.TabIndex = 28;
-            this.delete.Text = "Удалить";
-            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Text = "Удалить тренировку";
+            this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.delete_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(583, 455);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(215, 33);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Изменить";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // change
-            // 
-            this.change.Location = new System.Drawing.Point(583, 409);
-            this.change.Name = "change";
-            this.change.Size = new System.Drawing.Size(215, 33);
-            this.change.TabIndex = 26;
-            this.change.Text = "Изменить";
-            this.change.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(583, 310);
+            this.button2.BackColor = System.Drawing.Color.YellowGreen;
+            this.button2.Location = new System.Drawing.Point(63, 153);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 49);
+            this.button2.Size = new System.Drawing.Size(488, 37);
             this.button2.TabIndex = 25;
             this.button2.Text = "добавить тренировку";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
@@ -177,11 +160,23 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(910, 210);
             this.dataGridView1.TabIndex = 23;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // traning1BindingSource4
+            // 
+            this.traning1BindingSource4.DataMember = "traning1";
+            this.traning1BindingSource4.DataSource = this.diplomBaseDataSet2;
+            // 
+            // diplomBaseDataSet2
+            // 
+            this.diplomBaseDataSet2.DataSetName = "DiplomBaseDataSet2";
+            this.diplomBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.timeTrain);
             this.panel1.Controls.Add(this.secondCoach);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.mainCoach);
             this.panel1.Controls.Add(this.placeTrain);
             this.panel1.Controls.Add(this.typeTrain);
@@ -194,7 +189,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(17, 310);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 178);
+            this.panel1.Size = new System.Drawing.Size(579, 208);
             this.panel1.TabIndex = 29;
             // 
             // timeTrain
@@ -215,6 +210,11 @@
             this.secondCoach.Name = "secondCoach";
             this.secondCoach.Size = new System.Drawing.Size(125, 21);
             this.secondCoach.TabIndex = 12;
+            // 
+            // coachBindingSource
+            // 
+            this.coachBindingSource.DataMember = "coach";
+            this.coachBindingSource.DataSource = this.diplomBaseDataSet1;
             // 
             // mainCoach
             // 
@@ -331,11 +331,6 @@
             this.traning1BindingSource1.DataMember = "traning1";
             this.traning1BindingSource1.DataSource = this.diplomBaseDataSet1;
             // 
-            // coachBindingSource
-            // 
-            this.coachBindingSource.DataMember = "coach";
-            this.coachBindingSource.DataSource = this.diplomBaseDataSet1;
-            // 
             // coachTableAdapter
             // 
             this.coachTableAdapter.ClearBeforeFill = true;
@@ -350,16 +345,6 @@
             this.traning1BindingSource3.DataMember = "traning1";
             this.traning1BindingSource3.DataSource = this.diplomBaseDataSet1;
             // 
-            // diplomBaseDataSet2
-            // 
-            this.diplomBaseDataSet2.DataSetName = "DiplomBaseDataSet2";
-            this.diplomBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // traning1BindingSource4
-            // 
-            this.traning1BindingSource4.DataMember = "traning1";
-            this.traning1BindingSource4.DataSource = this.diplomBaseDataSet2;
-            // 
             // traning1TableAdapter1
             // 
             this.traning1TableAdapter1.ClearBeforeFill = true;
@@ -367,45 +352,54 @@
             // idtrainingDataGridViewTextBoxColumn
             // 
             this.idtrainingDataGridViewTextBoxColumn.DataPropertyName = "id_training";
-            this.idtrainingDataGridViewTextBoxColumn.HeaderText = "id_training";
+            this.idtrainingDataGridViewTextBoxColumn.HeaderText = "id";
             this.idtrainingDataGridViewTextBoxColumn.Name = "idtrainingDataGridViewTextBoxColumn";
             this.idtrainingDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dayofweekDataGridViewTextBoxColumn
             // 
             this.dayofweekDataGridViewTextBoxColumn.DataPropertyName = "day_of_week";
-            this.dayofweekDataGridViewTextBoxColumn.HeaderText = "day_of_week";
+            this.dayofweekDataGridViewTextBoxColumn.HeaderText = "День недели";
             this.dayofweekDataGridViewTextBoxColumn.Name = "dayofweekDataGridViewTextBoxColumn";
             // 
             // typetrainingDataGridViewTextBoxColumn
             // 
             this.typetrainingDataGridViewTextBoxColumn.DataPropertyName = "type_training";
-            this.typetrainingDataGridViewTextBoxColumn.HeaderText = "type_training";
+            this.typetrainingDataGridViewTextBoxColumn.HeaderText = "Тип Тренировки";
             this.typetrainingDataGridViewTextBoxColumn.Name = "typetrainingDataGridViewTextBoxColumn";
             // 
             // timetrainingDataGridViewTextBoxColumn
             // 
             this.timetrainingDataGridViewTextBoxColumn.DataPropertyName = "time_training";
-            this.timetrainingDataGridViewTextBoxColumn.HeaderText = "time_training";
+            this.timetrainingDataGridViewTextBoxColumn.HeaderText = "Время Тренировки";
             this.timetrainingDataGridViewTextBoxColumn.Name = "timetrainingDataGridViewTextBoxColumn";
             // 
             // mestotrDataGridViewTextBoxColumn
             // 
             this.mestotrDataGridViewTextBoxColumn.DataPropertyName = "mesto_tr";
-            this.mestotrDataGridViewTextBoxColumn.HeaderText = "mesto_tr";
+            this.mestotrDataGridViewTextBoxColumn.HeaderText = "Место";
             this.mestotrDataGridViewTextBoxColumn.Name = "mestotrDataGridViewTextBoxColumn";
             // 
             // maincoachDataGridViewTextBoxColumn
             // 
             this.maincoachDataGridViewTextBoxColumn.DataPropertyName = "main_coach";
-            this.maincoachDataGridViewTextBoxColumn.HeaderText = "main_coach";
+            this.maincoachDataGridViewTextBoxColumn.HeaderText = "Главный тренер";
             this.maincoachDataGridViewTextBoxColumn.Name = "maincoachDataGridViewTextBoxColumn";
             // 
             // secondcoachDataGridViewTextBoxColumn
             // 
             this.secondcoachDataGridViewTextBoxColumn.DataPropertyName = "second_coach";
-            this.secondcoachDataGridViewTextBoxColumn.HeaderText = "second_coach";
+            this.secondcoachDataGridViewTextBoxColumn.HeaderText = "Тренер подготовки";
             this.secondcoachDataGridViewTextBoxColumn.Name = "secondcoachDataGridViewTextBoxColumn";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(625, 339);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(193, 13);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Введите id тренировки для удаления";
             // 
             // traininga
             // 
@@ -413,12 +407,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(944, 611);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.deleteB);
-            this.Controls.Add(this.delete);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.change);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -428,14 +420,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.traning1BindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,8 +441,6 @@
         private DiplomBaseDataSet1TableAdapters.traning1TableAdapter traning1TableAdapter;
         private System.Windows.Forms.TextBox deleteB;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button change;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -482,5 +472,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mestotrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maincoachDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn secondcoachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
     }
 }

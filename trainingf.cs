@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,8 @@ namespace Dipllom_Gencha
 
         private void training_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diplomBaseDataSet1.traning1". При необходимости она может быть перемещена или удалена.
-            this.traning1TableAdapter.Fill(this.diplomBaseDataSet1.traning1);
+            dataGridView1.DataSource = bindingSource;
+            RefreshDataGrid();
 
         }
 
@@ -29,6 +30,19 @@ namespace Dipllom_Gencha
             footb footb = new footb();
             footb.Show();
             this.Hide();
+        }
+        private BindingSource bindingSource = new BindingSource();
+        private void RefreshDataGrid()
+        {
+            DataBase DataBase = new DataBase();
+
+            string queryString = $"select * from traning1";
+            var dataView = new SqlDataAdapter(queryString, DataBase.GetConnection());
+            var commandBuilder = new SqlCommandBuilder(dataView);
+            var dataTable = new DataTable();
+            dataView.Fill(dataTable);
+            bindingSource.DataSource = dataTable;
+
         }
     }
 }

@@ -153,6 +153,7 @@ namespace Dipllom_Gencha
         {
             DataBase DataBase = new DataBase();
             int userId;
+
             if (int.TryParse(deleteB.Text, out userId))
             {
                 string delete = "Delete from traning1 where id_training = @userId"; 
@@ -168,12 +169,17 @@ namespace Dipllom_Gencha
                 }
                 else
                 {
-                    MessageBox.Show("Некоректные данные");
+                    MessageBox.Show("Введите существующее id ");
                 }
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

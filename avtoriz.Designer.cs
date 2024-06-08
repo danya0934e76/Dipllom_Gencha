@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.showPass = new System.Windows.Forms.CheckBox();
             this.vxod1 = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.TextBox();
@@ -47,6 +48,8 @@
             this.roles = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.passrch = new System.Windows.Forms.CheckBox();
+            this.Роли = new System.Windows.Forms.ToolTip(this.components);
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // showPass
@@ -204,6 +207,7 @@
             this.roles.Name = "roles";
             this.roles.Size = new System.Drawing.Size(44, 21);
             this.roles.TabIndex = 16;
+            this.Роли.SetToolTip(this.roles, "1 - Админ\r\n2 - Тренер \r\n3 - Футблист \r\n4 - Персонал\r\n");
             // 
             // label6
             // 
@@ -225,12 +229,32 @@
             this.passrch.UseVisualStyleBackColor = true;
             this.passrch.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
+            // Роли
+            // 
+            this.Роли.AutoPopDelay = 5000;
+            this.Роли.InitialDelay = 20;
+            this.Роли.ReshowDelay = 0;
+            this.Роли.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(394, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 15);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Выход";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // avtoriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(455, 586);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.passrch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.roles);
@@ -250,6 +274,7 @@
             this.Controls.Add(this.login);
             this.Controls.Add(this.vxod1);
             this.Controls.Add(this.showPass);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "avtoriz";
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.avtoriz_Load);
@@ -279,6 +304,8 @@
         private System.Windows.Forms.ComboBox roles;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox passrch;
+        private System.Windows.Forms.ToolTip Роли;
+        private System.Windows.Forms.Label label7;
     }
 }
 

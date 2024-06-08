@@ -144,5 +144,15 @@ namespace Dipllom_Gencha
             }
 
         }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace Dipllom_Gencha
             InitializeComponent();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             admin admin = new admin();
@@ -25,6 +26,7 @@ namespace Dipllom_Gencha
             this.Hide();
 
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -50,11 +52,12 @@ namespace Dipllom_Gencha
 
         private void traininga_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = bindingSource;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diplomBaseDataSet2.traning1". При необходимости она может быть перемещена или удалена.
             this.traning1TableAdapter1.Fill(this.diplomBaseDataSet2.traning1);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diplomBaseDataSet1.coach". При необходимости она может быть перемещена или удалена.
             this.coachTableAdapter.Fill(this.diplomBaseDataSet1.coach);
-
+            RefreshDataGrid();
         }
 
         private void dayOfWeek_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,9 +129,14 @@ namespace Dipllom_Gencha
                 }
                 else
                 {
-                    MessageBox.Show("Некоректные данные");
+                    MessageBox.Show(" Введите существующее id");
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     }

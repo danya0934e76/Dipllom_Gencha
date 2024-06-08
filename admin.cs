@@ -126,8 +126,8 @@ namespace Dipllom_Gencha
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            gamesc gamesc = new gamesc();
-            gamesc.Show();
+            gamesa gamesa = new gamesa();
+            gamesa.Show();
             this.Hide();
         }
     }

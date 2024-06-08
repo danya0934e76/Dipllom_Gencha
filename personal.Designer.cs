@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personal));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.coachBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diplomBaseDataSet = new Dipllom_Gencha.DiplomBaseDataSet();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,35 +41,33 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.training = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.diplomBaseDataSet = new Dipllom_Gencha.DiplomBaseDataSet();
-            this.coachBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coachTableAdapter = new Dipllom_Gencha.DiplomBaseDataSetTableAdapters.coachTableAdapter();
-            this.idcoachesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namecoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typecoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agecoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diplomBaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playersTableAdapter = new Dipllom_Gencha.DiplomBaseDataSetTableAdapters.playersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameplayerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberplayerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryplayerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageplayerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diplomBaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.coachTableAdapter = new Dipllom_Gencha.DiplomBaseDataSetTableAdapters.coachTableAdapter();
+            this.playersTableAdapter = new Dipllom_Gencha.DiplomBaseDataSetTableAdapters.playersTableAdapter();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.idcoachesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namecoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typecoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agecoachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -92,8 +92,18 @@
             this.dataGridView2.DataSource = this.coachBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(16, 84);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(439, 154);
+            this.dataGridView2.Size = new System.Drawing.Size(439, 175);
             this.dataGridView2.TabIndex = 42;
+            // 
+            // coachBindingSource
+            // 
+            this.coachBindingSource.DataMember = "coach";
+            this.coachBindingSource.DataSource = this.diplomBaseDataSet;
+            // 
+            // diplomBaseDataSet
+            // 
+            this.diplomBaseDataSet.DataSetName = "DiplomBaseDataSet";
+            this.diplomBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -107,12 +117,14 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Location = new System.Drawing.Point(395, 543);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 36);
             this.button2.TabIndex = 34;
             this.button2.Text = "Список игр";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label2
             // 
@@ -146,16 +158,18 @@
             // 
             // training
             // 
+            this.training.BackColor = System.Drawing.SystemColors.Info;
             this.training.Location = new System.Drawing.Point(785, 540);
             this.training.Name = "training";
             this.training.Size = new System.Drawing.Size(123, 36);
             this.training.TabIndex = 35;
             this.training.Text = "Список тренировок";
-            this.training.UseVisualStyleBackColor = true;
+            this.training.UseVisualStyleBackColor = false;
             this.training.Click += new System.EventHandler(this.training_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -168,80 +182,8 @@
             this.dataGridView1.DataSource = this.playersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(273, 298);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(635, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(635, 221);
             this.dataGridView1.TabIndex = 33;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-9, 262);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1087, 13);
-            this.label3.TabIndex = 40;
-            this.label3.Text = resources.GetString("label3.Text");
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(15, 543);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 36);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // diplomBaseDataSet
-            // 
-            this.diplomBaseDataSet.DataSetName = "DiplomBaseDataSet";
-            this.diplomBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coachBindingSource
-            // 
-            this.coachBindingSource.DataMember = "coach";
-            this.coachBindingSource.DataSource = this.diplomBaseDataSet;
-            // 
-            // coachTableAdapter
-            // 
-            this.coachTableAdapter.ClearBeforeFill = true;
-            // 
-            // idcoachesDataGridViewTextBoxColumn
-            // 
-            this.idcoachesDataGridViewTextBoxColumn.DataPropertyName = "id_coaches";
-            this.idcoachesDataGridViewTextBoxColumn.HeaderText = "id_coaches";
-            this.idcoachesDataGridViewTextBoxColumn.Name = "idcoachesDataGridViewTextBoxColumn";
-            this.idcoachesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // namecoachDataGridViewTextBoxColumn
-            // 
-            this.namecoachDataGridViewTextBoxColumn.DataPropertyName = "name_coach";
-            this.namecoachDataGridViewTextBoxColumn.HeaderText = "name_coach";
-            this.namecoachDataGridViewTextBoxColumn.Name = "namecoachDataGridViewTextBoxColumn";
-            // 
-            // typecoachDataGridViewTextBoxColumn
-            // 
-            this.typecoachDataGridViewTextBoxColumn.DataPropertyName = "type_coach";
-            this.typecoachDataGridViewTextBoxColumn.HeaderText = "type_coach";
-            this.typecoachDataGridViewTextBoxColumn.Name = "typecoachDataGridViewTextBoxColumn";
-            // 
-            // agecoachDataGridViewTextBoxColumn
-            // 
-            this.agecoachDataGridViewTextBoxColumn.DataPropertyName = "age_coach";
-            this.agecoachDataGridViewTextBoxColumn.HeaderText = "age_coach";
-            this.agecoachDataGridViewTextBoxColumn.Name = "agecoachDataGridViewTextBoxColumn";
-            // 
-            // diplomBaseDataSetBindingSource
-            // 
-            this.diplomBaseDataSetBindingSource.DataSource = this.diplomBaseDataSet;
-            this.diplomBaseDataSetBindingSource.Position = 0;
-            // 
-            // playersBindingSource
-            // 
-            this.playersBindingSource.DataMember = "players";
-            this.playersBindingSource.DataSource = this.diplomBaseDataSetBindingSource;
-            // 
-            // playersTableAdapter
-            // 
-            this.playersTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -280,6 +222,44 @@
             this.ageplayerDataGridViewTextBoxColumn.HeaderText = "age_player";
             this.ageplayerDataGridViewTextBoxColumn.Name = "ageplayerDataGridViewTextBoxColumn";
             // 
+            // playersBindingSource
+            // 
+            this.playersBindingSource.DataMember = "players";
+            this.playersBindingSource.DataSource = this.diplomBaseDataSetBindingSource;
+            // 
+            // diplomBaseDataSetBindingSource
+            // 
+            this.diplomBaseDataSetBindingSource.DataSource = this.diplomBaseDataSet;
+            this.diplomBaseDataSetBindingSource.Position = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(-9, 262);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1087, 13);
+            this.label3.TabIndex = 40;
+            this.label3.Text = resources.GetString("label3.Text");
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RosyBrown;
+            this.button1.Location = new System.Drawing.Point(15, 543);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 36);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // coachTableAdapter
+            // 
+            this.coachTableAdapter.ClearBeforeFill = true;
+            // 
+            // playersTableAdapter
+            // 
+            this.playersTableAdapter.ClearBeforeFill = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -300,10 +280,39 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Футбольный клуб Барселона";
             // 
+            // idcoachesDataGridViewTextBoxColumn
+            // 
+            this.idcoachesDataGridViewTextBoxColumn.DataPropertyName = "id_coaches";
+            this.idcoachesDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idcoachesDataGridViewTextBoxColumn.Name = "idcoachesDataGridViewTextBoxColumn";
+            this.idcoachesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // namecoachDataGridViewTextBoxColumn
+            // 
+            this.namecoachDataGridViewTextBoxColumn.DataPropertyName = "name_coach";
+            this.namecoachDataGridViewTextBoxColumn.HeaderText = "ФИО тренера";
+            this.namecoachDataGridViewTextBoxColumn.Name = "namecoachDataGridViewTextBoxColumn";
+            this.namecoachDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typecoachDataGridViewTextBoxColumn
+            // 
+            this.typecoachDataGridViewTextBoxColumn.DataPropertyName = "type_coach";
+            this.typecoachDataGridViewTextBoxColumn.HeaderText = "Обязанность";
+            this.typecoachDataGridViewTextBoxColumn.Name = "typecoachDataGridViewTextBoxColumn";
+            this.typecoachDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // agecoachDataGridViewTextBoxColumn
+            // 
+            this.agecoachDataGridViewTextBoxColumn.DataPropertyName = "age_coach";
+            this.agecoachDataGridViewTextBoxColumn.HeaderText = "Возраст";
+            this.agecoachDataGridViewTextBoxColumn.Name = "agecoachDataGridViewTextBoxColumn";
+            this.agecoachDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(934, 611);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -323,13 +332,13 @@
             this.Load += new System.EventHandler(this.personal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coachBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,10 +360,6 @@
         private DiplomBaseDataSet diplomBaseDataSet;
         private System.Windows.Forms.BindingSource coachBindingSource;
         private DiplomBaseDataSetTableAdapters.coachTableAdapter coachTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcoachesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namecoachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typecoachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn agecoachDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource diplomBaseDataSetBindingSource;
         private System.Windows.Forms.BindingSource playersBindingSource;
         private DiplomBaseDataSetTableAdapters.playersTableAdapter playersTableAdapter;
@@ -366,5 +371,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ageplayerDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcoachesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namecoachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typecoachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn agecoachDataGridViewTextBoxColumn;
     }
 }

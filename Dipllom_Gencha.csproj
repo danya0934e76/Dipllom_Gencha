@@ -91,6 +91,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DiplomBaseDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DiplomBaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiplomBaseDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="footb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +113,18 @@
     </Compile>
     <Compile Include="gamesc.Designer.cs">
       <DependentUpon>gamesc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GamesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamesP.Designer.cs">
+      <DependentUpon>GamesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GemesF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GemesF.Designer.cs">
+      <DependentUpon>GemesF.cs</DependentUpon>
     </Compile>
     <Compile Include="personal.cs">
       <SubType>Form</SubType>
@@ -158,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gamesc.resx">
       <DependentUpon>gamesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GamesP.resx">
+      <DependentUpon>GamesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GemesF.resx">
+      <DependentUpon>GemesF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="personal.resx">
       <DependentUpon>personal.cs</DependentUpon>
@@ -237,6 +260,17 @@
     </None>
     <None Include="DiplomBaseDataSet4.xss">
       <DependentUpon>DiplomBaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DiplomBaseDataSet5.xsc">
+      <DependentUpon>DiplomBaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DiplomBaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiplomBaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiplomBaseDataSet5.xss">
+      <DependentUpon>DiplomBaseDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

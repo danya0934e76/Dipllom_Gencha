@@ -121,7 +121,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAx0AAAKeCAYAAADAynZRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAA/7JJREFUeF7EvWWcVWeeLdxjd+ze6Znunu7pnu4k3XEj7iFGEoIFCyG4QyCFuzsB
+        vwAADr8BOAVTJAAA/7JJREFUeF7EvWWcVWeeLdxjd+ze6Znunu7pnu4k3XEj7iFGEoIFCyG4QyCFuzsB
         Cnd3Ldy1oJCCcnc77lKGfFzvWs+pUxwI6c7cmft7P6zf3mefvZ/9yN/WY/tnwbo78NfegjdcB291Pfw1
         tw18hLc2BjV3Ho7au43wEX4d6yJH/R/gubv6NmyhOqRU2TBz0xYsTziIhItXYfdXY++BM7A4QwjU8P4w
         3xOO5MFn3tnw3uo7/B19l463EbjFdzRA53pHhcuH9IISnElKxpEzSTh+/ipOX0rm7xu4kJyGlMJi5Fnt
@@ -25772,6 +25772,15 @@
   <metadata name="coachBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>173, 17</value>
   </metadata>
+  <metadata name="coachBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>173, 17</value>
+  </metadata>
+  <metadata name="diplomBaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="diplomBaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label2.Text" xml:space="preserve">
     <value>Барселoна - профессиональный футбольный клуб из одноимённого города. 
 Основан в 1899 году группой швейцарских, британских, испанских и каталонск-
@@ -37612,23 +37621,17 @@
   <metadata name="playersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>724, 17</value>
   </metadata>
-  <data name="label3.Text" xml:space="preserve">
-    <value>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
-  </data>
-  <metadata name="diplomBaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="coachTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>336, 17</value>
+  <metadata name="diplomBaseDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>491, 17</value>
   </metadata>
   <metadata name="diplomBaseDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>491, 17</value>
   </metadata>
-  <metadata name="diplomBaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="playersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>724, 17</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
+  </data>
+  <metadata name="coachTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>336, 17</value>
   </metadata>
   <metadata name="playersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>892, 17</value>

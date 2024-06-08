@@ -118,5 +118,12 @@ namespace Dipllom_Gencha
             avtoriz.Show();
             this.Hide();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            GemesF gemesF = new GemesF();
+            gemesF.Show();
+            this.Hide();
+        }
     }
 }

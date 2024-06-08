@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,9 +29,29 @@ namespace Dipllom_Gencha
         {
 
         }
+        private BindingSource bindingSource = new BindingSource();
+        private void RefreshDataGrid()
+        {
+            DataBase DataBase = new DataBase();
+
+            string queryString = $"select * from traning1";
+            var dataView = new SqlDataAdapter(queryString, DataBase.GetConnection());
+            var commandBuilder = new SqlCommandBuilder(dataView);
+            var dataTable = new DataTable();
+            dataView.Fill(dataTable);
+            bindingSource.DataSource = dataTable;
+
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void trainingp_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bindingSource;
+            RefreshDataGrid();
 
         }
     }

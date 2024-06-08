@@ -10,31 +10,25 @@ using System.Windows.Forms;
 
 namespace Dipllom_Gencha
 {
-    public partial class gamesa : Form
+    public partial class GamesP : Form
     {
-        public gamesa()
-
+        public GamesP()
         {
             InitializeComponent();
         }
 
-        private void gamesa_Load(object sender, EventArgs e)
+        private void GamesP_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diplomBaseDataSet4.games". При необходимости она может быть перемещена или удалена.
-            this.gamesTableAdapter1.Fill(this.diplomBaseDataSet4.games);
+            this.gamesTableAdapter.Fill(this.diplomBaseDataSet4.games);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            admin admin = new admin();
-            admin.Show();
+            personal personal = new personal();
+            personal.Show();
             this.Hide();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

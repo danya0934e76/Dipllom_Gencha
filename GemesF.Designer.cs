@@ -1,6 +1,6 @@
 ﻿namespace Dipllom_Gencha
 {
-    partial class gamesa
+    partial class GemesF
     {
         /// <summary>
         /// Required designer variable.
@@ -30,70 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             this.game = new System.Windows.Forms.Label();
-            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.diplomBaseDataSet3 = new Dipllom_Gencha.DiplomBaseDataSet3();
-            this.gamesTableAdapter = new Dipllom_Gencha.DiplomBaseDataSet3TableAdapters.gamesTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gamesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.diplomBaseDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.diplomBaseDataSet4 = new Dipllom_Gencha.DiplomBaseDataSet4();
-            this.gamesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.gamesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.gamesTableAdapter1 = new Dipllom_Gencha.DiplomBaseDataSet4TableAdapters.gamesTableAdapter();
+            this.diplomBaseDataSet3 = new Dipllom_Gencha.DiplomBaseDataSet3();
+            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gamesTableAdapter = new Dipllom_Gencha.DiplomBaseDataSet3TableAdapters.gamesTableAdapter();
             this.idgameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oponentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stadiumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tournamentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dategameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet4BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // game
             // 
             this.game.AutoSize = true;
             this.game.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.game.Location = new System.Drawing.Point(12, 9);
+            this.game.Location = new System.Drawing.Point(29, 25);
             this.game.Name = "game";
             this.game.Size = new System.Drawing.Size(157, 25);
-            this.game.TabIndex = 4;
+            this.game.TabIndex = 10;
             this.game.Text = "Игры команды";
-            // 
-            // gamesBindingSource
-            // 
-            this.gamesBindingSource.DataMember = "games";
-            this.gamesBindingSource.DataSource = this.diplomBaseDataSet3;
-            // 
-            // diplomBaseDataSet3
-            // 
-            this.diplomBaseDataSet3.DataSetName = "DiplomBaseDataSet3";
-            this.diplomBaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gamesTableAdapter
-            // 
-            this.gamesTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Location = new System.Drawing.Point(13, 558);
+            this.button1.Location = new System.Drawing.Point(13, 555);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 30);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -101,43 +77,27 @@
             this.oponentDataGridViewTextBoxColumn,
             this.stadiumDataGridViewTextBoxColumn,
             this.tournamentDataGridViewTextBoxColumn,
-            this.scoreDataGridViewTextBoxColumn,
-            this.dategameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.gamesBindingSource3;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 77);
+            this.scoreDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.gamesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 92);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(910, 428);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(897, 337);
+            this.dataGridView1.TabIndex = 9;
             // 
-            // gamesBindingSource3
+            // diplomBaseDataSet3
             // 
-            this.gamesBindingSource3.DataMember = "games";
-            this.gamesBindingSource3.DataSource = this.diplomBaseDataSet4BindingSource;
+            this.diplomBaseDataSet3.DataSetName = "DiplomBaseDataSet3";
+            this.diplomBaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // diplomBaseDataSet4BindingSource
+            // gamesBindingSource
             // 
-            this.diplomBaseDataSet4BindingSource.DataSource = this.diplomBaseDataSet4;
-            this.diplomBaseDataSet4BindingSource.Position = 0;
+            this.gamesBindingSource.DataMember = "games";
+            this.gamesBindingSource.DataSource = this.diplomBaseDataSet3;
             // 
-            // diplomBaseDataSet4
+            // gamesTableAdapter
             // 
-            this.diplomBaseDataSet4.DataSetName = "DiplomBaseDataSet4";
-            this.diplomBaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gamesBindingSource1
-            // 
-            this.gamesBindingSource1.DataMember = "games";
-            this.gamesBindingSource1.DataSource = this.diplomBaseDataSet3;
-            // 
-            // gamesBindingSource2
-            // 
-            this.gamesBindingSource2.DataMember = "games";
-            this.gamesBindingSource2.DataSource = this.diplomBaseDataSet4;
-            // 
-            // gamesTableAdapter1
-            // 
-            this.gamesTableAdapter1.ClearBeforeFill = true;
+            this.gamesTableAdapter.ClearBeforeFill = true;
             // 
             // idgameDataGridViewTextBoxColumn
             // 
@@ -151,51 +111,44 @@
             this.oponentDataGridViewTextBoxColumn.DataPropertyName = "oponent";
             this.oponentDataGridViewTextBoxColumn.HeaderText = "Оппонент";
             this.oponentDataGridViewTextBoxColumn.Name = "oponentDataGridViewTextBoxColumn";
+            this.oponentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // stadiumDataGridViewTextBoxColumn
             // 
             this.stadiumDataGridViewTextBoxColumn.DataPropertyName = "stadium";
             this.stadiumDataGridViewTextBoxColumn.HeaderText = "Стадион";
             this.stadiumDataGridViewTextBoxColumn.Name = "stadiumDataGridViewTextBoxColumn";
+            this.stadiumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tournamentDataGridViewTextBoxColumn
             // 
             this.tournamentDataGridViewTextBoxColumn.DataPropertyName = "tournament";
             this.tournamentDataGridViewTextBoxColumn.HeaderText = "Турнир";
             this.tournamentDataGridViewTextBoxColumn.Name = "tournamentDataGridViewTextBoxColumn";
+            this.tournamentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // scoreDataGridViewTextBoxColumn
             // 
             this.scoreDataGridViewTextBoxColumn.DataPropertyName = "score";
             this.scoreDataGridViewTextBoxColumn.HeaderText = "Счет";
             this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
+            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dategameDataGridViewTextBoxColumn
-            // 
-            this.dategameDataGridViewTextBoxColumn.DataPropertyName = "date_game";
-            this.dategameDataGridViewTextBoxColumn.HeaderText = "Дата игры";
-            this.dategameDataGridViewTextBoxColumn.Name = "dategameDataGridViewTextBoxColumn";
-            // 
-            // gamesa
+            // GemesF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(934, 611);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.game);
             this.Controls.Add(this.button1);
-            this.Name = "gamesa";
-            this.Text = "gamec";
-            this.Load += new System.EventHandler(this.gamesa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet3)).EndInit();
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "GemesF";
+            this.Text = "GemesF";
+            this.Load += new System.EventHandler(this.GemesF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet4BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomBaseDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,22 +157,15 @@
         #endregion
 
         private System.Windows.Forms.Label game;
-        private System.Windows.Forms.BindingSource gamesBindingSource;
-        private DiplomBaseDataSet3 diplomBaseDataSet3;
-        private DiplomBaseDataSet3TableAdapters.gamesTableAdapter gamesTableAdapter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource gamesBindingSource1;
-        private DiplomBaseDataSet4 diplomBaseDataSet4;
-        private System.Windows.Forms.BindingSource gamesBindingSource2;
-        private DiplomBaseDataSet4TableAdapters.gamesTableAdapter gamesTableAdapter1;
-        private System.Windows.Forms.BindingSource gamesBindingSource3;
-        private System.Windows.Forms.BindingSource diplomBaseDataSet4BindingSource;
+        private DiplomBaseDataSet3 diplomBaseDataSet3;
+        private System.Windows.Forms.BindingSource gamesBindingSource;
+        private DiplomBaseDataSet3TableAdapters.gamesTableAdapter gamesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idgameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oponentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stadiumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tournamentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dategameDataGridViewTextBoxColumn;
     }
 }
