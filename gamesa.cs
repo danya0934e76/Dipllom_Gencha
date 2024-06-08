@@ -16,5 +16,19 @@ namespace Dipllom_Gencha
         {
             InitializeComponent();
         }
+
+        private void gamesa_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diplomBaseDataSet4.games". При необходимости она может быть перемещена или удалена.
+            this.gamesTableAdapter1.Fill(this.diplomBaseDataSet4.games);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            admin admin = new admin();
+            admin.Show();
+            this.Hide();
+        }
     }
 }
